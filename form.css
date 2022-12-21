@@ -1,0 +1,33 @@
+.body {
+    background-image: url(https://wallpapercave.com/wp/wp2939993.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+.form {
+    width: 240px;
+    display: inline-block;
+    font-family: sans-serif;
+
+}
+.design{
+    width: 250px;
+    height: 50px;
+    border-radius: 5px;
+    border-style: hidden;
+
+}
+.button{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+    background-color:yellowgreen;
+}
+.header {
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.footer {
+    margin-top: 200px;
+}

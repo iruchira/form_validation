@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<body class="body">
+    
+    <header class="header">
+        <h3>Login Form</h3>
+    </header>
+
+    <section>
+        <form class="form">
+            <label for="fname">First name:</label>
+            <input type="text" id="fname"class="design" name="fname" onkeyup="validateName()"/>
+            <span id="name-error"></span><br>
+            <br>
+            <label for="lname">Last name:</label>
+            <input type="text" id="lname" class="design" name="lname" onkeyup="validateLname()"/>
+            <span id="lname-error"></span><br>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" class="design" name="password" onkeyup="validatePassword()"/><br>
+            <p id="psw"></p>
+            <br>
+            <label for="Cpassword">Confirm Password:</label>
+            <input type="password" id="Cpassword" class="design" name="Cpassword" onkeyup="validatePassword()"/><br>
+            <span id="cpsw"></span>
+            <br>
+            <lable for="notes">Note:</lable>
+            <br>
+            <textarea id="textarea" class="design" name="textarea" rows="10" cols="20"></textarea><br>
+            <br>
+            <button onclick="return submitButton()" type="submit" id="button" class="button">Submit</button>
+            <span id="submit-error"></span>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <h5>Contact Us</h5>
+    </footer>
+    <script src="form.js"></script>
+    </body>
+
+</html>
