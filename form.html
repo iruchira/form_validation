@@ -7,45 +7,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Form</title>
     <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@600&display=swap" rel="stylesheet"> -->
 </head>
 
 <body class="body">
-    
-    <header class="header">
-        <h3>Login Form</h3>
-    </header>
-
+    <!-- <div class="title">Sign Up</div> -->
     <section>
         <form class="form">
-            <label for="fname">First name:</label>
-            <input type="text" id="fname"class="design" name="fname" onkeyup="validateName()"/>
-            <span id="name-error"></span><br>
-            <br>
-            <label for="lname">Last name:</label>
-            <input type="text" id="lname" class="design" name="lname" onkeyup="validateLname()"/>
-            <span id="lname-error"></span><br>
-            <br>
-            <label for="password">Password:</label>
-            <input type="password" id="password" class="design" name="password" onkeyup="validatePassword()"/><br>
-            <p id="psw"></p>
-            <br>
-            <label for="Cpassword">Confirm Password:</label>
-            <input type="password" id="Cpassword" class="design" name="Cpassword" onkeyup="validatePassword()"/><br>
-            <span id="cpsw"></span>
-            <br>
-            <lable for="notes">Note:</lable>
-            <br>
-            <textarea id="textarea" class="design" name="textarea" rows="10" cols="20"></textarea><br>
-            <br>
-            <button onclick="return submitButton()" type="submit" id="button" class="button">Submit</button>
-            <span id="submit-error"></span>
+            <div id="div1">Create a new account </div>
+            <div class="inputFields">
+                <label for="fname" id="labels">* First Name:</label>
+                <input type="text" id="fname" class="design" name="fname" onkeyup="validateName()" />
+                <span id="name-error"></span>
+            </div>
+            <div class="inputFields">
+                <label for="lname" id="labels">* Last Name:</label>
+                <input type="text" id="lname" class="design" name="lname" onkeyup="validateLname()" />
+                <span id="lname-error"></span>
+            </div>
+            <div class="inputFields">
+                <label for="password" id="labels">* Password:</label>
+                <input type="password" id="password" class="design" name="password" onkeyup="validatePassword()" /><br>
+                <p id="psw"></p>
+            </div>
+            <div class="inputFields">
+                <label for="Cpassword" id="labels">* Confirm Password:</label>
+                <input type="password" id="Cpassword" class="design" name="Cpassword"
+                    onkeyup="validatePassword()" /><br>
+                <span id="cpsw"></span>
+            </div>
+            <div class="inputFields">
+                <label for="notes" id="labels">Notes</label>
+                <textarea id="textarea" class="design" name="textarea" rows="10" cols="20"></textarea>
+            </div>
+            <div class="button">
+                <button onclick="return submitButton()" type="button" id="button"><span>Sign Up</span></button>
+                <span id="submit-error"></span>
+            </div>
+            <div id="snackbar">Thank you for registration !!</div>
         </form>
+        
     </section>
-
-    <footer class="footer">
-        <h5>Contact Us</h5>
-    </footer>
     <script src="form.js"></script>
-    </body>
+</body>
 
 </html>
