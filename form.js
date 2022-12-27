@@ -6,11 +6,12 @@ var submitError = document.getElementById('submit-error');
 
 function validateName() {
     var name = document.getElementById('fname').value;
-    if (name.length == -1 || name.trim() === "") {
-        nameError.innerHTML = 'Name cannot be blank';
+    if (name.length == 0 || name.trim() === "") {
+        nameError.innerHTML = '';
         return false;
     }
-    if (!name.match(/^[A-Za-z]*$/)) {
+    //regex for allowing letters and spaces//
+    if (!name.match(/^[A-Za-z\s]*$/)) {
         nameError.innerHTML = 'alphabets only';
         return false;
     }
@@ -20,10 +21,10 @@ function validateName() {
 function validateLname() {
     var lname = document.getElementById('lname').value;
     if (lname.length == 0 || lname.trim() === "") {
-        lnameError.innerHTML = 'Name cannot be blank';
+        lnameError.innerHTML = '';
         return false;
     }
-    if (!lname.match(/^[A-Za-z]*$/)) {
+    if (!lname.match(/^[A-Za-z\s]*$/)) {
         lnameError.innerHTML = 'alphabets only';
         return false;
     }
@@ -55,13 +56,13 @@ function submitButton() {
         setTimeout(function () { submitError.style.display = 'none' }, 3000);
         return false;
     }
-    setTimeout(function(){location.reload()},2000);
+    setTimeout(function(){location.reload()},500);
     toast();
     return true;
 }
 function toast(){
     var toastMassage= document.getElementById('snackbar');
     toastMassage.className ="show";
-    setTimeout(function(){ toastMassage.className = toastMassage.className.replace("show", ""); }, 3000);
+    setTimeout(function(){ toastMassage.className = toastMassage.className.replace("show", ""); }, 5000);
 }
 
