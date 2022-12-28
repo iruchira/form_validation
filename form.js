@@ -1,5 +1,5 @@
 var nameError = document.getElementById('name-error');
-var lnameError = document.getElementById('lname-error');
+var emailError = document.getElementById('email-error');
 var psw = document.getElementById('psw');
 var cpsw = document.getElementById('cpsw');
 var submitError = document.getElementById('submit-error');
@@ -18,17 +18,17 @@ function validateName() {
     nameError.innerHTML = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
     return true;
 }
-function validateLname() {
-    var lname = document.getElementById('lname').value;
-    if (lname.length == 0 || lname.trim() === "") {
-        lnameError.innerHTML = '';
+function validateEmailid() {
+    var emailId = document.getElementById('email_id').value;
+    if (emailId.length == 0 || emailId.trim() === "") {
+        emailError.innerHTML = '';
         return false;
     }
-    if (!lname.match(/^[A-Za-z\s]*$/)) {
-        lnameError.innerHTML = 'alphabets only';
+    if (!emailId.match(/^[a-zA-Z0-9+_.-]+@[a-zA-Z0-9.-]+$/)) {
+        emailError.innerHTML = 'invalid email';
         return false;
     }
-    lnameError.innerHTML = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
+    emailError.innerHTML = '<i class="fa fa-check-circle-o" aria-hidden="true"></i>';
     return true;
 }
 function validatePassword() {
@@ -50,7 +50,7 @@ function validatePassword() {
     return true;
 }
 function submitButton() {
-    if (!validateName() || !validateLname() || !validatePassword()) {
+    if (!validateName() || !validateEmailid() || !validatePassword()) {
         submitError.style.display = 'block';
         submitError.innerHTML = 'Please fill out *required fields !!';
         setTimeout(function () { submitError.style.display = 'none' }, 3000);
