@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Domine&display=swap" rel="stylesheet">
+</head>
+
+<body class="body">
+    <section>
+        <form class="form">
+            <div id="div1">Create new account </div>
+            <div class="inputFields">
+                <label for="fname" id="labels">* Full Name:</label>
+                <input type="text" id="fname" class="design" name="fname" onkeyup="validateName()" />
+                <span id="name-error" class="msg"></span>
+            </div>
+            <div class="inputFields">
+                <label for="email_id" id="labels">* Email id :</label>
+                <input type="email" id="email_id" class="design" name="email_id" onkeyup="validateEmailid()" />
+                <span id="email-error" class="msg"></span>
+            </div>
+            <div class="inputFields">
+                <label for="password" id="labels">* Password:</label>
+                <input type="password" id="password" class="design" name="password" onkeyup="validatePassword()" /><br>
+                <span id="psw" class="msg" ></span>
+            </div>
+            <div class="inputFields">
+                <label for="Cpassword" id="labels">* Confirm Password:</label>
+                <input type="password" id="Cpassword" class="design" name="Cpassword"
+                    onkeyup="validatePassword()" /><br>
+                <span id="cpsw" class="msg" ></span>
+            </div>
+            <div class="inputFields">
+                <label for="notes" id="labels">Notes</label>
+                <textarea id="textarea" class="design" name="textarea" rows="10" cols="20"></textarea>
+            </div>
+            <div class="button">
+                <button onclick="return submitButton()" type="button" id="button"><span>Sign Up</span></button>
+                <span id="submit-error" class="msg"></span>
+            </div>
+            <br>
+            <div id="snackbar">Thank you for registration !!</div>
+            <div class ="inputFields">Already registered ?? <a href="login.html">Click here to Login</a></div>
+        </form>
+        
+    </section>
+    <script src="./form.js"></script>
+</body>
+
+</html>
